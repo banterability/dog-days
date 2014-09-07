@@ -2,5 +2,8 @@
   "name": "dog-days",
   "version": "0.0.0",
   "author": "Jeff Long <hello@banterability.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.8.3"
+  }
 }
