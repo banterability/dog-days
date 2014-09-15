@@ -2,13 +2,13 @@ moment = require 'moment'
 {groupBy, isNull} = require 'underscore'
 
 presentMonth = (days) ->
-  output = []
+  output = {weeks: []}
   weeks = splitByWeek(days)
   for weekNumber, weekData of weeks
-    weekOutput = []
+    weekOutput = {days: []}
     for day in weekData
-      weekOutput.push extractFields(day)
-    output.push weekOutput
+      weekOutput.days.push extractFields(day)
+    output.weeks.push weekOutput
   output
 
 splitByWeek = (days) ->
