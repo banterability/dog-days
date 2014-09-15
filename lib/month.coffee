@@ -6,8 +6,8 @@ buildDay = (year, month, day) ->
 
 buildMonth = (month, year) ->
   now = new Date()
-  month = month or now.getMonth()
-  year = year or now.getFullYear()
+  month ?= now.getMonth()
+  year ?= now.getFullYear()
 
   totalDays = moment(new Date(year, month, 1)).daysInMonth()
 
