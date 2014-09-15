@@ -5,7 +5,7 @@ http = require 'http'
 
 Templates = loadTemplates()
 
-thisMonth = buildMonth(0)
+thisMonth = buildMonth()
 month = presentMonth(thisMonth)
 
 server = http.createServer (req, res) ->
