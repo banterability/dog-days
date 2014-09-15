@@ -15,15 +15,19 @@ buildMonth = (month, year, options={}) ->
   if options.byWeek
     daysByWeek = groupBy days, (thisDay) -> moment(thisDay.date).week()
     for weekNumber, weekGroup of daysByWeek
-      if weekGroup.length < 7
-        directionToPad = if weekGroup[0].date.getDay() is 0 then 'after' else 'before'
-        while weekGroup.length < 7
-          if directionToPad is 'after'
-            weekGroup.push null
-          else
-            weekGroup.unshift null
+      weekGroup = padWeek(weekGroup)
     daysByWeek
   else
     days
+
+padWeek = (week) ->
+  if week.length < 7
+    directionToPad = if week[0].date.getDay() is 0 then 'after' else 'before'
+    while week.length < 7
+      if directionToPad is 'after'
+        week.push null
+      else
+        week.unshift null
+  week
 
 module.exports = {buildMonth}
