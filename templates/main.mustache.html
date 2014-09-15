@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Dog Days</title>
+    <style>
+      .empty{background-color:rgba(0,0,0,0.3)}
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+      </tr>
+      {{#weeks}}
+        {{>week}}
+      {{/weeks}}
+    </table>
+  </body>
+</html>
