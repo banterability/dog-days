@@ -7,5 +7,8 @@
     "hogan.js": "^3.0.2",
     "moment": "^2.8.3",
     "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "node-static": "^0.7.5"
   }
 }
